@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".scheduling.View_Today_Acheivement"
+   >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_weight="0.3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:fontFamily="@font/nanum2"
+                android:id="@+id/Goal_name"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="60dp"
+                android:text="토익 900"
+                android:textSize="24sp"
+                android:textStyle="bold"/>
+            <!--        //변수 이름 Goal_name-->
+
+            <TextView
+                android:fontFamily="@font/nanum2"
+                android:id="@+id/D_day"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginRight="60dp"
+                android:text="D-44"
+                android:gravity="right"
+                android:textSize="22sp"
+                android:textStyle="bold"
+            />
+            <!--       //첫줄 TEXT들 끝-->
+
+        </LinearLayout>
+
+
+        <!--        밑줄 코드-->
+        <View
+            android:id="@+id/line2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_gravity="center_horizontal"
+            android:background="#000000"
+
+        />
+        <!--     //선그리는 코드-->
+
+        <LinearLayout
+            android:layout_weight="0.1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:fontFamily="@font/nanum2"
+                android:id="@+id/fighting_today"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:gravity="center_horizontal"
+                android:text="오늘도 화이팅!"
+                android:textColor="#83CAC8"
+                android:textSize="18sp"
+                android:textStyle="bold"
+            />
+
+        </LinearLayout>
+
+        <!--할일별/오늘/이번달 메뉴 버튼   -->
+
+        <LinearLayout
+            android:layout_weight="0.08"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp">
+
+            <Button
+                android:fontFamily="@font/nanum2"
+                android:id="@+id/button_view_todo_acheivement2"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="60dp"
+                android:layout_marginLeft="10dp"
+                android:background="#00ff0000"
+                android:text="할일별"
+                android:textSize="18sp"
+            />
+
+            <Button
+                android:fontFamily="@font/nanum2"
+                android:id="@+id/button_view_today_acheivement"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:background="#00ff0000"
+                android:text="오늘"
+                android:textColor="#24466B "
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:textSize="20sp"/>
+
+            <Button
+                android:fontFamily="@font/nanum2"
+                android:id="@+id/button_view_month_acheivement2"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:layout_marginRight="10dp"
+                android:background="#00ff0000"
+                android:text="이번달"
+                android:textSize="18sp"
+                android:textStyle="bold"
+            />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_weight="0.1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp">
+
+            <TextView
+                android:fontFamily="@font/nanum2"
+                android:id="@+id/date_view1"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:layout_gravity="right"
+                android:gravity="center"
+                android:text="08"
+                android:textSize="20dp"
+            />
+            <TextView
+                android:fontFamily="@font/nanum2"
+                android:id="@+id/date_view2"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_gravity="center_horizontal"
+                android:text="09"
+                android:textSize="20dp"
+                android:textStyle="bold"
+            />
+
+            <TextView
+                android:fontFamily="@font/nanum2"
+                android:id="@+id/date_view3"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_gravity="left"
+                android:text="10"
+                android:textSize="20dp" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5"
+            android:background="#e8e8f0"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.01"
+                android:paddingTop="30dp">
+
+                <TextView
+                    android:fontFamily="@font/nanum2"
+                    android:id="@+id/to_do"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:layout_height="30dp"
+                    android:background="@drawable/round_square_darkgray"
+                    android:gravity="center"
+                    android:layout_gravity="bottom"
+                    android:layout_marginLeft="30dp"
+                    android:text="Todo List - 1"
+                    android:textColor="#FFFFFF"
+                    android:textSize="17sp"
+                />
+
+
+                <TextView
+                    android:fontFamily="@font/nanum2"
+                    android:id="@+id/to_do_dday1"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_weight="2.2"
+                    android:layout_marginRight="30dp"
+                    android:background="@drawable/round_square_light_gray"
+                    android:gravity="center"
+                    android:textColor="#585858"
+                    android:layout_gravity="bottom"
+                    android:text="D_day1"
+                    android:textSize="17sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+          >
+                <com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar
+                    android:id="@+id/progress_1"
+                    android:layout_height="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="15dp"
+                    app:rcBackgroundPadding="5dp" />
+            </LinearLayout>
+
+
+            <!--            할일2 그래프 구역-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.01"
+                android:paddingTop="10dp">
+
+                <TextView
+                    android:fontFamily="@font/nanum2"
+                    android:id="@+id/To_do2"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:layout_height="30dp"
+                    android:background="@drawable/round_square_darkgray"
+                    android:gravity="center"
+                    android:layout_marginLeft="30dp"
+                    android:text="Todo List - 2"
+                    android:textColor="#FFFFFF"
+                    android:textSize="17sp"
+                />
+
+                <TextView
+                    android:fontFamily="@font/nanum2"
+                    android:id="@+id/to_do_dday2"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_weight="2.2"
+                    android:layout_marginRight="30dp"
+                    android:background="@drawable/round_square_light_gray"
+                    android:gravity="center"
+                    android:text="D_day2"
+                    android:textColor="#585858"
+                    android:textSize="17sp"
+                />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.4">
+                <com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar
+                    android:id="@+id/progress_2"
+                    android:layout_height="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="15dp"
+                    app:rcBackgroundPadding="5dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

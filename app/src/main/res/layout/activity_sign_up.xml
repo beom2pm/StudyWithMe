@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="261dp"
+            android:layout_height="205dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_above="@+id/id_sign"
+            android:layout_marginBottom="15dp"
+            app:srcCompat="@drawable/logo"
+            android:contentDescription="@string/description_imageView"/>
+
+        <EditText
+            android:fontFamily="@font/nanum2"
+            android:id="@+id/id_sign"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:ems="15"
+            android:hint="id (인증 시 필요한 이메일 계정 입력)" />
+
+        <EditText
+            android:fontFamily="@font/nanum2"
+            android:id="@+id/password_sign"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:ems="15"
+            android:layout_below="@+id/id_sign"
+            android:hint="password"
+            android:inputType="textPassword"/>
+
+        <EditText
+            android:fontFamily="@font/nanum2"
+            android:id="@+id/name_sign"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:ems="15"
+            android:layout_below="@+id/password_sign"
+            android:hint="user name" />
+
+        <Button
+            android:fontFamily="@font/nanum2"
+            android:id="@+id/btn_signup"
+            android:layout_below="@+id/name_sign"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="가입하기"
+            android:enabled="false"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"/>
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

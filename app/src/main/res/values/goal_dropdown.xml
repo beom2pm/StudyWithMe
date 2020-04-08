@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="goal">
+        <item> 토익 900</item>
+        <item> 정처기</item>
+        <item> 토익스피킹</item>
+        <item> 클라우드</item>
+</string-array>
+</resources>

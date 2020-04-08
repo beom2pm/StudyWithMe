@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bookmark_category_list_item_border">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:textAlignment="center"
+        android:weightSum="10">
+<!--
+        <LinearLayout
+            android:id="@+id/linkImage_linearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:textAlignment="center">
+
+            <ImageView
+                android:id="@+id/bookmark_link_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+-->
+        <LinearLayout
+            android:id="@+id/linkInfo_linearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:ignore="MissingConstraints"
+            android:layout_margin="10dp"
+            android:layout_weight="10">
+            <TextView
+                android:fontFamily="@font/nanum2"
+                android:id="@+id/bookmark_link_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="링크 제목" />
+
+            <TextView
+                android:fontFamily="@font/nanum2"
+                android:id="@+id/bookmark_link_url"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autoLink="web"
+                android:linksClickable="true"
+                android:textSize="18sp"
+                app:layout_constraintTop_toBottomOf="@+id/bookmark_link_title"
+                tools:text="링크 url주소" />
+
+            <TextView
+                android:fontFamily="@font/nanum2"
+                android:id="@+id/bookmark_link_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                app:layout_constraintTop_toBottomOf="@+id/bookmark_link_url"
+                tools:text="링크 설명글" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

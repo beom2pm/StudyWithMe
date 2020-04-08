@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
+             tools:context=".Board.Write_post">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:paddingTop="30dp"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+        >
+            <TextView
+                android:fontFamily="@font/nanum2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="목표 선택:"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:layout_marginLeft="15dp"
+            />
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+            />
+            <Spinner
+                android:id="@+id/spinner_goal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:spinnerMode="dialog"
+            />
+        </LinearLayout>
+        <EditText
+            android:fontFamily="@font/nanum2"
+            android:id="@+id/board_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_weight="5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="내용을 입력하세요"
+            android:paddingLeft="15dp"
+            android:paddingTop="15dp"
+            android:gravity="top"
+            android:background="@drawable/line_box"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_weight="1">
+            <TextView
+                android:fontFamily="@font/nanum2"
+                android:id="@+id/text_shop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="#"
+                android:textSize="25dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:textColor="#b01809"
+                android:textStyle="bold|italic"/>
+            <com.skyhope.materialtagview.TagView
+                android:id="@+id/text_view_show_more"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/text_shop"
+                android:layout_marginLeft="10dp"
+                app:tag_separator="HASH_SEPARATOR"
+                android:layout_marginRight="15dp"
+            />
+
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal">
+            <Button
+                android:fontFamily="@font/nanum2"
+                android:id="@+id/register_board_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rboard_button"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:textColor="#ffffff"
+                android:text="등록"/>
+            <Button
+                android:fontFamily="@font/nanum2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/gboard_btn_shape"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:textColor="#e74c3c"
+                android:text="취소"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

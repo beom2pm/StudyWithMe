@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.Home">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:id="@+id/home_today_done_rate_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toTopOf="@+id/home_today_done_rate_layout"
+                    app:layout_constraintStart_toStartOf="parent">
+                    <TextView
+                        android:fontFamily="@font/nanum2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:text="오늘 나의 달성률"
+                        android:textColor="#24466B "
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/home_today_done_rate_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    app:layout_constraintStart_toEndOf="@+id/home_today_done_rate_title"
+                    app:layout_constraintEnd_toStartOf="@+id/home_today_list_entire_layout"
+                    app:layout_constraintBottom_toBottomOf="@+id/home_today_done_rate_title"
+                    app:layout_constraintTop_toTopOf="@id/home_today_list_entire_layout">
+
+                    <TextView
+                        android:id="@+id/home_today_piechart_has_no_item_msg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/nanum2"
+                        android:text="아직 등록된 할일이 없습니다!"
+                        android:textAlignment="center"
+                        android:textColor="#000000"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+
+                    <lecho.lib.hellocharts.view.PieChartView
+                        android:id="@+id/home_today_detailedWork_piechart"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/home_today_list_entire_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/home_today_done_rate_layout">
+
+                    <android.support.design.widget.TabLayout
+                        android:id="@+id/home_detail_list_tab"
+                        android:layout_width="180dp"
+                        android:layout_height="40dp"
+                        app:tabIndicatorColor="@color/mainColor">
+                    </android.support.design.widget.TabLayout>
+
+                    <Button
+                        android:id="@+id/home_create_today_detailedWork_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="20dp"
+                        android:background="@drawable/whbutton"
+                        android:fontFamily="@font/nanum2"
+                        android:text="일정 추가"
+                        android:textColor="#ffffff"
+                        android:textStyle="bold" />
+
+                    <android.support.v4.view.ViewPager
+                        android:id="@+id/home_today_list_view_pager"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/home_detail_list_tab"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                    </android.support.v4.view.ViewPager>
+
+                </RelativeLayout>
+
+            </android.support.constraint.ConstraintLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>

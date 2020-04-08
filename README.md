@@ -1,9 +1,13 @@
 # StudyWithMe
-정보공유를 위한 스터디 플랫폼
+- 2019 DESIGN OF SYSTEM INTEGRATION(CAPSTONE DESIGN)
 
-환경: AndroidStudio
-개발 언어: kotlin
+## Platform to achieve goals
+- scheduling
+- recommend
+- board
+- bookmark
 
-DB: MYSQL
-SERVER: PHP
-
+## skill
+- kotlin
+- php
+- mysql

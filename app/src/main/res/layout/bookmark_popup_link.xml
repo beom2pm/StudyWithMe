@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical"
+android:layout_centerInParent="true"
+android:background="#ffffff"
+android:gravity="center">
+
+    <TextView
+        android:fontFamily="@font/nanum2"
+        android:id="@+id/link_popupTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft = "16dp"
+        android:layout_marginTop="24dp"
+        android:text="링크 추가"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+    <EditText
+        android:fontFamily="@font/nanum2"
+        android:id="@+id/link_url"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="15dp"
+        android:ems="10"
+        android:hint="링크 주소 입력"
+        android:inputType="textUri"/>
+    <EditText
+        android:fontFamily="@font/nanum2"
+        android:id="@+id/link_description"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:scrollHorizontally="false"
+        android:gravity="top"
+        android:padding="10dp"
+        android:inputType="textMultiLine|textNoSuggestions"
+        android:background="@drawable/edit_text_border"
+        android:ems="10"
+        android:hint="링크에 대한 메모 입력" />
+
+    <LinearLayout
+        android:id="@+id/link_dialog_button_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:weightSum="10">
+
+        <Button
+            android:fontFamily="@font/nanum2"
+            android:id="@+id/link_dialog_positive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="30dp"
+            android:layout_weight="3.5"
+            android:text="확인" />
+
+        <Button
+            android:fontFamily="@font/nanum2"
+            android:id="@+id/link_dialog_negative"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="3.5"
+            android:text="취소" />
+    </LinearLayout>
+
+
+</LinearLayout>

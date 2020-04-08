@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 스케쥴, 할 일, 세부 계획 리스트. 나중에 db에서 불러와야함.-->
+    <string-array name="bookmarkGoal">
+        <item>연결된 세부 목표 없음</item>
+    </string-array>
+</resources>

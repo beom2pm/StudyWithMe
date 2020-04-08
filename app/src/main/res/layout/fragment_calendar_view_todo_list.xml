@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             tools:context=".fragment.Calendar">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <!--        <LinearLayout-->
+        <!--            android:paddingTop="10dp"-->
+        <!--            android:layout_weight="0.3"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            >-->
+        <!--            <TextView-->
+        <!--                android:layout_width="wrap_content"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:text="목표 선택 ▶▶▶"-->
+        <!--                android:textSize="20dp"-->
+        <!--                android:textStyle="bold"-->
+        <!--                android:layout_marginLeft="30dp"-->
+        <!--                />-->
+        <!--            <View-->
+        <!--                android:layout_width="0dp"-->
+        <!--                android:layout_height="0dp"-->
+        <!--                android:layout_weight="1"-->
+        <!--                />-->
+        <!--            <Spinner-->
+        <!--                android:id="@+id/spinner_calendar_goal"-->
+        <!--                android:layout_width="wrap_content"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:spinnerMode="dialog"-->
+        <!--                android:layout_gravity="end"-->
+        <!--                android:textColor = "#000000"-->
+        <!--                />-->
+        <!--        </LinearLayout>-->
+
+
+
+        <LinearLayout
+            android:paddingTop="0dp"
+            android:layout_weight="0.5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+        >
+
+            <TextView
+                android:fontFamily="@font/nanum2"
+                android:id="@+id/Goal_name"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="목표이름"
+                android:textSize="28dp"
+                android:textStyle="bold"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft = "30dp" />
+
+
+
+            <TextView
+                android:layout_weight="1"
+                android:fontFamily="@font/nanum2"
+                android:id="@+id/Goal_day"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="디데이"
+                android:textSize="28dp"
+                android:layout_gravity="bottom"
+                android:gravity="right"
+                android:layout_marginRight = "30dp" />
+
+
+        </LinearLayout>
+        <!--        목표이름 아래 선 -->
+        <View
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_gravity="center_horizontal"
+            android:background="#000000" />
+
+
+        <LinearLayout
+            android:paddingTop="5dp"
+            android:layout_weight="0.3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+        >
+            <TextView
+                android:fontFamily="@font/nanum2"
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="TODO"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:gravity="right"
+                android:paddingEnd="10dp"
+                android:layout_gravity="bottom"
+            />
+
+            <TextView
+                android:fontFamily="@font/nanum2"
+                android:id="@+id/textView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="D-day"
+                android:layout_marginLeft="15dp"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:gravity="right"
+                android:layout_gravity="bottom"
+            />
+
+            <TextView
+                android:fontFamily="@font/nanum2"
+                android:id="@+id/textView5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="완료"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:gravity="right"
+                android:paddingEnd="30dp"
+                android:layout_gravity="bottom"
+            />
+        </LinearLayout>
+
+        <LinearLayout
+            android:paddingTop="5dp"
+            android:layout_weight="0.7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="20dp">
+
+                <TextView
+                    android:fontFamily="@font/nanum2"
+                    android:id="@+id/scheduling_todo_list_has_no_item_msg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000000"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/todo_list_recyclerview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="8dp"
+                    android:requiresFadingEdge="horizontal|vertical"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:paddingTop="5dp"
+            android:layout_weight="0.2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:fontFamily="@font/nanum2"
+                android:id="@+id/button_calendar_add_todo"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/whbutton"
+                android:text="할일추가"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:paddingTop="5dp"
+            android:layout_weight="0.1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+        >
+            <TextView
+                android:fontFamily="@font/nanum2"
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="벌써 이만큼 달성했어요!"
+                android:textColor="#83CAC8"
+                android:textSize="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:paddingTop="5dp"
+            android:layout_weight="1.5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#e8e8f0"
+        >
+
+            <Button
+                android:fontFamily="@font/nanum2"
+                android:id="@+id/button_view_todo_acheivement"
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:background="@drawable/border_btn"
+                android:text="할일별"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="20dp" />
+
+            <Button
+                android:fontFamily="@font/nanum2"
+                android:id="@+id/button_view_today_acheivement"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="43dp"
+                android:layout_marginRight="43dp"
+                android:background="@drawable/border_btn"
+                android:text="오늘" />
+
+            <Button
+                android:fontFamily="@font/nanum2"
+                android:id="@+id/button_view_month_acheivement"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="43dp"
+                android:background="@drawable/border_btn"
+                android:text="이번달" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

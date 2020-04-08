@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".scheduling.View_Month_Acheivement">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_weight="0.1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:fontFamily="@font/nanum2"
+                android:id="@+id/Goal_name"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="70dp"
+                android:text="토익 900"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+            <!--        //변수 이름 Goal_name-->
+
+            <TextView
+                android:fontFamily="@font/nanum2"
+                android:id="@+id/D_day_month"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginRight="70dp"
+                android:text="D-44"
+                android:gravity="right"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+            <!--       //첫줄 TEXT들 끝-->
+
+        </LinearLayout>
+
+
+        <!--        밑줄 코드-->
+        <View
+            android:id="@+id/line2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginLeft="25dp"
+            android:layout_gravity="center_horizontal"
+            android:background="#000000"
+
+        />
+        <!--     //선그리는 코드-->
+
+        <LinearLayout
+            android:layout_weight="0.1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!--    이번달 알차게 보내고있나요?-->
+            <TextView
+                android:fontFamily="@font/nanum2"
+                android:id="@+id/fighting_today"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:gravity="center_horizontal"
+                android:text="이번달, 계획대로 알차게 보내고 있나요?0?"
+                android:textColor="#83CAC8"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <!--할일별/오늘/이번달 메뉴 버튼   -->
+
+        <LinearLayout
+            android:layout_weight="0.01"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp">
+
+            <Button
+                android:fontFamily="@font/nanum2"
+                android:id="@+id/button_view_todo_acheivement3"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="60dp"
+                android:layout_marginLeft="10dp"
+                android:background="#00ff0000"
+                android:text="할일별"
+                android:textSize="18sp"
+            />
+
+            <Button
+                android:fontFamily="@font/nanum2"
+                android:id="@+id/button_view_today_acheivement3"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:background="#00ff0000"
+                android:text="오늘"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:textSize="18sp"
+            />
+
+            <Button
+                android:fontFamily="@font/nanum2"
+                android:id="@+id/button_view_month_acheivement"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:layout_marginRight="10dp"
+                android:background="#00ff0000"
+                android:text="이번달"
+                android:textColor="#24466B "
+                android:textSize="20sp"
+                android:textStyle="bold"
+            />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_weight="0.01"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp">
+            <!--        //지금 몇월인지 알려주는 코드-->
+
+            <TextView
+                android:fontFamily="@font/nanum2"
+                android:id="@+id/month_view_last"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:layout_gravity="right"
+                android:gravity="center"
+                android:text="◀◀10월"
+                android:textSize="20sp" />
+
+            <TextView
+                android:fontFamily="@font/nanum2"
+                android:id="@+id/monthandyear_view_now"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_gravity="center_horizontal"
+                android:text="2019년 11월"
+                android:textSize="20sp"
+                android:textStyle="bold"
+            />
+            <TextView
+                android:fontFamily="@font/nanum2"
+                android:id="@+id/month_view_next"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_gravity="left"
+                android:text="12월▶▶"
+                android:textSize="20sp"
+            />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#e8e8f0"
+        >
+
+            <TextView
+                android:fontFamily="@font/nanum2"
+                android:id="@+id/no_meaning"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_marginStart="100dp"
+                android:text="달력들어갈자리"
+                android:textSize="20sp"
+            />
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>
+

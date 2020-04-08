@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:id="@+id/select_frag"
+             tools:context=".Board.SelectPostFrag">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="MissingConstraints"
+            android:layout_marginTop="20dp">
+            <ImageView
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:id="@+id/profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/profile"/>
+            <TextView
+                android:fontFamily="@font/nanum2"
+                android:id="@+id/id_user"
+                android:layout_toRightOf="@+id/profile"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="user_id"/>
+            <TextView
+                android:fontFamily="@font/nanum2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/goal_txt"
+                android:layout_below="@+id/id_user"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:textSize="17dp"
+                android:textStyle="bold"
+                android:text="목표:"/>
+            <TextView
+                android:fontFamily="@font/nanum2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/id_goal"
+                android:layout_below="@+id/id_user"
+                android:layout_toRightOf="@+id/goal_txt"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:textSize="17dp"
+                android:textStyle="bold"
+                android:text="goal_id"/>
+            <ToggleButton
+                android:id="@+id/button_favorite"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@drawable/favorite_button"
+                android:checked="false"
+                android:layout_below="@+id/id_user"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="30dp"
+                android:layout_alignParentRight="true"
+                android:text=""
+                android:textOff=""
+                android:textOn=""/>
+
+            <TextView
+                android:fontFamily="@font/nanum2"
+                android:id="@+id/id_content"
+                android:layout_width="match_parent"
+                android:layout_height="350dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/txt_border"
+                android:layout_below="@+id/goal_txt"
+                android:text="contents...."
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"/>
+
+            <TextView
+                android:fontFamily="@font/nanum2"
+                android:id="@+id/date_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/id_content"
+                android:text="date.."/>
+
+
+
+        </RelativeLayout>
+        <TextView
+            android:fontFamily="@font/nanum2"
+            android:id="@+id/tag_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="test"
+            android:bufferType="spannable"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"/>
+
+    </LinearLayout>
+
+
+</FrameLayout>

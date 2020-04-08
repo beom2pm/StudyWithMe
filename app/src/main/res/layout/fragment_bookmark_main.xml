@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.Bookmark">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar_bookmark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/colorPrimary"
+                android:minHeight="?attr/actionBarSize"
+                android:theme="?attr/actionBarTheme">
+                <TextView
+                    android:fontFamily="@font/nanum2"
+                    android:id="@+id/bookmark_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:longClickable="false"
+                    android:text="@string/menuName_bookmark"
+                    android:textColor="#ffffff"
+                    android:textSize="25dp"
+                    android:visibility="visible" />
+            </android.support.v7.widget.Toolbar>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="6">
+            <RelativeLayout
+                android:id="@+id/bookmark_category_createBtn_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="0dp"
+                android:layout_weight="1"
+                android:gravity="right"
+                tools:ignore="MissingConstraints,RtlHardcoded">
+                <Button
+                    android:fontFamily="@font/nanum2"
+                    android:id="@+id/bookmark_category_createBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:gravity="center"
+                    android:text="+ 새 카테고리 생성"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText,MissingConstraints" />
+            </RelativeLayout>
+            <LinearLayout
+                android:id="@+id/bookmark_category_list_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="5"
+                android:orientation="vertical"
+                tools:ignore="MissingContents">
+                <TextView
+                    android:fontFamily="@font/nanum2"
+                    android:id="@+id/bookmark_category_list_has_no_item_msg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp"
+                    android:textColor="#000000"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/bookmark_category_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="8dp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</FrameLayout>

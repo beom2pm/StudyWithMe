@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:clickable="true"
+    android:foreground="?selectableItemBackground"
+    card_view:cardElevation="3dp"
+    card_view:contentPadding="4dp">
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/goal_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+   >
+
+    <Button
+        android:id="@+id/goal_list_goalName"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="6dp"
+        android:background="@drawable/round_square_darkgray"
+        android:textSize="19sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/nanum2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="goalName"
+        android:textColor="#FFFFFF"
+    />
+
+    //목표이름
+    <TextView
+        android:id="@+id/goal_list_dDay_message"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textSize="19sp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginBottom="4dp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:fontFamily="@font/nanum2"
+        app:layout_constraintTop_toBottomOf="@+id/goal_list_goalName"
+        tools:text="하잇"/>
+
+
+    //디데이
+    <TextView
+        android:id="@+id/goal_list_dDay"
+        android:layout_width="match_parent"
+        android:layout_height="28dp"
+        android:textSize="19sp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginBottom="4dp"
+        android:gravity="center"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/goal_list_dDay_message"
+        tools:text="dDay"/>
+
+    //골아이디 제대로 넘어가는지 확인을 위해! 화면에서는 안보여용
+    <TextView
+        android:id="@+id/goal_list_id"
+        android:layout_width="match_parent"
+        android:layout_height="28dp"
+        android:textSize="19sp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginBottom="4dp"
+        android:gravity="center"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/goal_list_dDay"
+        tools:text="goal"/>
+
+
+
+</android.support.constraint.ConstraintLayout>
+</android.support.v7.widget.CardView>

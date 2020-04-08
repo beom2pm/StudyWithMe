@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".scheduling.AddGoalDialog">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:fontFamily="@font/nanum2"
+            android:id="@+id/new_goal_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="24dp"
+            android:text="새 목표 등록"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            />
+
+
+        <TextView
+            android:fontFamily="@font/nanum2"
+            android:id="@+id/nameofgoal"
+            android:layout_width="57dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="24dp"
+            android:text="목표명"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+
+        <EditText
+            android:fontFamily="@font/nanum2"
+            android:id="@+id/write_name_goal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:ems="10"
+            android:hint="텍스트를 입력해주세요."
+            android:inputType="textNoSuggestions"
+            android:privateImeOptions="defaultInputmode=korean"
+            />
+
+        <TextView
+            android:fontFamily="@font/nanum2"
+            android:id="@+id/goal_dayofgoal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="D-DAY"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_gravity="bottom"
+            />
+
+        <DatePicker
+            android:id="@+id/write_goal_day_goal"
+            android:layout_width="match_parent"
+            android:layout_height="175dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:calendarViewShown="false"
+            android:datePickerMode="spinner"
+            android:ems="10"
+            android:fontFamily="@font/nanum2" />
+
+
+<!--
+        <EditText
+            android:fontFamily="@font/nanum2"
+            android:id="@+id/write_goal_day_goal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:ems="10"
+            android:hint="날짜를 입력해주세요"
+            android:inputType="textNoSuggestions"
+            android:privateImeOptions="defaultInputmode=korean"
+            />
+-->
+
+    </LinearLayout>
+
+</FrameLayout>

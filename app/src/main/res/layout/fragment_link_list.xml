@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment.Bookmark_link_list">
+
+    <!-- TODO: Update blank fragment layout -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+            <LinearLayout
+                android:id="@+id/bookmark_link_list_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                tools:ignore="MissingContents">
+                <TextView
+                    android:id="@+id/bookmark_link_list_has_no_item_msg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp"
+                    android:textColor="#000000"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:visibility="gone"
+                    android:text = "아직 등록된 링크가 없습니다."/>
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/bookmark_link_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="8dp"/>
+            </LinearLayout>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/bookmark_link_add_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="25dp"
+            android:backgroundTint="#00BCD4"
+            android:src="@drawable/iconmonstr_plus_white_2_240"
+            app:borderWidth="0dp"
+            app:fabSize="normal" />
+
+        </RelativeLayout>
+</FrameLayout>
